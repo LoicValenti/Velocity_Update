@@ -1,5 +1,5 @@
 # Velocity_Update
-Updates the MIDI files velocity
+Updates MIDI files
 
 
 Save the script in a directory containing a file of MIDI files named "midi_files".
