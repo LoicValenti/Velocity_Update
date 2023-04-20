@@ -15,8 +15,9 @@ for filename in os.listdir(directory):
 
         for track in mid.tracks:
             for i, msg in enumerate(track):
-                if msg.type == 'note_on' or msg.type == 'note_off':
-                    track[i] = msg.copy(channel=0)
+                if msg.is_cc(7):
+                    print('Volume changed to', 0)
+
         mid.save('updated_velocity_{}'.format(filename))
 
 if __name__ == '__main__':
